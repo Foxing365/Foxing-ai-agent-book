@@ -69,8 +69,8 @@ function timelineCard(svg, id) {
   };
 }
 
-test('async-architecture layouts preserve every source label and remain in bounds in all 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('async-architecture layouts preserve every source label and remain in bounds in all 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory, dir } of Object.values(editions))
     for (const figure of [1, 2, 3, 4, 5]) {
       const source = readFigure(directory, figure);

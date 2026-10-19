@@ -55,7 +55,7 @@ test('Architecture retains its four directed connections and seven runtime tools
   assert.ok(Number(path[1]) > Number(path[2]));
 });
 test('Workflow preserves five stages and their tool groups despite translated source positions', () => {
-  for (const dir of ['book-en', 'book-vi', 'book-ja']) {
+  for (const dir of ['book', 'book-en']) {
     const result = layoutCodingCore(source(dir, 2), 2);
     assert.equal((result.match(/data-stage=/g) || []).length, 5);
     assert.equal((result.match(/marker-end=/g) || []).length, 4);

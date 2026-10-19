@@ -39,7 +39,7 @@ const renderedLabels = (source) =>
   ].map((match) => ({ index: Number(match[1]), value: normalize(match[2]) }));
 
 test('Chapter 8 training-foundation layouts retain every localized label in both themes', () => {
-  assert.equal(Object.keys(editions).length, 15);
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory } of Object.values(editions))
     for (const [number, { layout, labels: expectedCount }] of Object.entries(
       figures,

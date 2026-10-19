@@ -28,7 +28,7 @@ const readFigure = (directory, figure) =>
   );
 
 test('retrieval structure layouts preserve every localized source label once', () => {
-  assert.equal(Object.keys(editions).length, 15);
+  assert.equal(Object.keys(editions).length, 2);
   for (const edition of Object.values(editions))
     for (const figure of [9, 10, 11, 12]) {
       const source = readFigure(edition.directory, figure);
@@ -53,35 +53,20 @@ test('retrieval structure layouts preserve every localized source label once', (
     }
 });
 
-test('hybrid retrieval supports compact and extended source variants', () => {
-  const compact = layoutRetrievalStructure(readFigure('book-ja', 9), 9);
-  const extended = layoutRetrievalStructure(readFigure('book-en', 9), 9);
-  const arabic = layoutRetrievalStructure(readFigure('book-ar', 9), 9, {
-    rtl: true,
-  });
-  assert.match(compact, /data-variant="compact"/);
-  assert.doesNotMatch(compact, /data-retrieval-stage="reranker"/);
-  assert.match(extended, /data-variant="extended"/);
-  assert.match(extended, /data-retrieval-stage="reranker"/);
-  assert.match(extended, /data-retrieval-stage="final-ranking"/);
-  assert.equal((compact.match(/data-source-label=/g) || []).length, 21);
-  assert.equal((extended.match(/data-source-label=/g) || []).length, 25);
-  assert.match(extended, /d="M200 [\d.]+ L232 [\d.]+"/);
-  assert.match(extended, /d="M696 [\d.]+ L728 [\d.]+"/);
-  for (const index of [1, 4, 6, 8, 13, 15, 17])
-    assert.match(
-      arabic,
-      new RegExp(`dir="rtl"[^>]*><span data-source-label="${index}"`),
-    );
-  for (const index of [5, 7, 9, 14, 16, 18, 21])
-    assert.match(
-      arabic,
-      new RegExp(`dir="ltr"[^>]*><span data-source-label="${index}"`),
-    );
+test('hybrid retrieval preserves extended ranking stages in maintained editions', () => {
+  for (const { directory } of Object.values(editions)) {
+    const result = layoutRetrievalStructure(readFigure(directory, 9), 9);
+    assert.match(result, /data-variant="extended"/);
+    assert.match(result, /data-retrieval-stage="reranker"/);
+    assert.match(result, /data-retrieval-stage="final-ranking"/);
+    assert.equal((result.match(/data-source-label=/g) || []).length, 25);
+    assert.match(result, /d="M200 [\d.]+ L232 [\d.]+"/);
+    assert.match(result, /d="M696 [\d.]+ L728 [\d.]+"/);
+  }
 });
 
 test('recursive abstraction keeps all ten tree connectors directionless', () => {
-  for (const directory of ['book-en', 'book-es']) {
+  for (const directory of ['book', 'book-en']) {
     const result = layoutRetrievalStructure(readFigure(directory, 10), 10);
     assert.match(result, /data-tree-connectors="directionless"/);
     assert.equal(

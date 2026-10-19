@@ -53,8 +53,8 @@ function assertBounds(result, context) {
   }
 }
 
-test('comparison layouts preserve all labels, readable type, and bounds in 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('comparison layouts preserve all labels, readable type, and bounds in 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory, dir } of Object.values(editions))
     for (const [figure, layout] of Object.entries(figures)) {
       const input = source(directory, figure);

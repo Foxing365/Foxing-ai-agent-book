@@ -42,4 +42,4 @@ def test_chapter9_answers_cover_each_completed_translation():
             assert [n for n, _ in actual] == [n for n, _ in expected], answer_file
             assert actual[-1] == expected[-1], answer_file
             checked.add(book.name)
-    assert checked == {p.name for p in ROOT.glob('book*') if p.is_dir()} - {'book-he'}
+    assert checked == {p.name for p in ROOT.glob('book*') if p.is_dir()}

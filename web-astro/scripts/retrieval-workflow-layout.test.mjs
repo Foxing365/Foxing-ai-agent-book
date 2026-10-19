@@ -8,7 +8,7 @@ const editions = JSON.parse(
 );
 
 test('Workflow typography preserves translated content and readable text across all editions', () => {
-  for (const { directory } of Object.values(editions))
+  for (const { directory, dir } of Object.values(editions))
     for (const figure of [13, 14, 15]) {
       const source = readFileSync(
         new URL(
@@ -18,7 +18,7 @@ test('Workflow typography preserves translated content and readable text across 
         'utf8',
       );
       const svg = layoutRetrievalWorkflow(source, figure, {
-        rtl: ['book-ar', 'book-he'].includes(directory),
+        rtl: dir === 'rtl',
       });
       const labels = extractLabels(source, figure, [18, 19, 20, 21, 23]);
       const rendered = [

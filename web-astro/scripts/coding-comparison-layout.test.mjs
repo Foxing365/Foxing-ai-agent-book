@@ -25,8 +25,8 @@ const source = (directory, figure) =>
     'utf8',
   );
 
-test('coding comparisons preserve all labels and readable type in 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('coding comparisons preserve all labels and readable type in 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory, dir } of Object.values(editions))
     for (const figure of [3, 4]) {
       const input = source(directory, figure);

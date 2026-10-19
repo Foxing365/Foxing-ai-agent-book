@@ -1,6 +1,6 @@
 # Static-site navigation localization
 
-The website publishes every book edition in one MkDocs build. Because
+This fork publishes Simplified Chinese and English in one MkDocs build. Because
 Material for MkDocs accepts only one `theme.language` for that build, the
 canonical HTML chrome is generated in Chinese and localized in the browser for
 translated book URLs.

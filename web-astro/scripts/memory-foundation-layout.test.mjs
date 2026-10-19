@@ -43,7 +43,7 @@ function readFigure(directory, number) {
 }
 
 test('memory-foundation layouts preserve every localized source label with readable type', () => {
-  assert.equal(Object.keys(editions).length, 15);
+  assert.equal(Object.keys(editions).length, 2);
   for (const edition of Object.values(editions))
     for (const [figure, specification] of Object.entries(figures)) {
       const source = readFigure(edition.directory, figure);

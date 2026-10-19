@@ -36,8 +36,8 @@ function boxes(svg, element) {
   }));
 }
 
-test('tool-cache layouts preserve every source label once in all 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('tool-cache layouts preserve every source label once in all 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const edition of Object.values(editions))
     for (const figure of [3, 4]) {
       const source = readFigure(edition.directory, figure);

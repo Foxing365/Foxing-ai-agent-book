@@ -49,8 +49,8 @@ function edges(svg) {
   }));
 }
 
-test('coding-production layouts preserve all source labels at readable sizes in all 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('coding-production layouts preserve all source labels at readable sizes in all 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory, dir } of Object.values(editions))
     for (const figure of [5, 6, 7]) {
       const source = readFigure(directory, figure);
@@ -235,10 +235,10 @@ test('coding-production layouts reject source drift and unsupported figures', ()
     );
   }
   assert.doesNotThrow(() =>
-    layoutCodingProduction(readFigure('book-es', 7), 7),
+    layoutCodingProduction(readFigure('book-en', 7), 7),
   );
   assert.doesNotThrow(() =>
-    layoutCodingProduction(readFigure('book-vi', 5), 5),
+    layoutCodingProduction(readFigure('book-en', 5), 5),
   );
   assert.doesNotThrow(() => layoutCodingProduction(readFigure('book', 6), 6));
   assert.throws(

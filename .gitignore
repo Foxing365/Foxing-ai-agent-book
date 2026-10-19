@@ -89,3 +89,10 @@ chapter1/web-search-agent/validation/*
 chapter1/search-codegen/validation/*
 chapter1/image-gen-workflow/validation/*
 chapter1/learning-from-experience/validation/*
+
+# New experiment runs are local by default. Already tracked canonical evidence
+# remains versioned; add new reviewed evidence explicitly with git add -f.
+chapter*/**/validation/
+chapter*/**/runs/
+__pycache__/
+.pytest_cache/

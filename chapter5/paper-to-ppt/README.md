@@ -399,8 +399,9 @@ short one-line figure titles, and bounded inline image layout. Vision remains
 the authority for actual overflow, readability and layout. The two attention
 figures retain the published pixels and exact PDF crop rectangles; a recorded
 90-degree presentation transform makes the original vertical labels readable
-on a landscape slide. Failed refinement runs remain under `validation/runs/`
-and are never promoted when the independent judge reports a blocking defect.
+on a landscape slide. Superseded, unreferenced refinement runs are archived
+as described in [the retention record](../../docs/EXPERIMENT_RETENTION.md).
+A run is never promoted when the independent judge reports a blocking defect.
 
 ### Limitations
 

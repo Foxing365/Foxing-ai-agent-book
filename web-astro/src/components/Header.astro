@@ -2,7 +2,6 @@
 import { translator, editions, locales, type Locale } from '../lib/i18n';
 import Icon from './Icon.astro';
 import { withBase } from '../lib/site-path.mjs';
-import machineTranslation from '../lib/machine-translation.json';
 import { repo } from '../lib/book';
 const {
   reader = false,
@@ -60,24 +59,6 @@ const edition = editions[locale];
               >
                 {editions[language].name}
                 <span aria-hidden="true">{language === locale ? '✓' : ''}</span>
-              </a>
-            ))
-          }
-          <div class="machine-language-heading" dir="auto">
-            机器翻译 / Machine translation<br /><small
-              >未经审核 / Not vetted</small
-            >
-          </div>
-          {
-            machineTranslation.languages.map((language) => (
-              <a
-                data-machine-language={language.name}
-                href={`${reader ? withBase(`/book-en/chapter${chapterNumber}/`) : editions.en.home}?translate=${language.locale}`}
-                lang={language.locale}
-                dir={'dir' in language ? language.dir : 'ltr'}
-              >
-                {language.label}
-                <small aria-hidden="true">MT</small>
               </a>
             ))
           }

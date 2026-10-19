@@ -47,7 +47,7 @@ const figures = {
 };
 
 test('Chapter 10 collaboration and society layouts retain every localized label in both themes', () => {
-  assert.equal(Object.keys(editions).length, 15);
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory } of Object.values(editions))
     for (const [
       number,

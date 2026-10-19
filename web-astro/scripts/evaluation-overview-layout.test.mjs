@@ -96,8 +96,8 @@ function crosses([x1, y1, x2, y2], box) {
   return false;
 }
 
-test('evaluation overview layouts preserve all labels, typography, and bounds in 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('evaluation overview layouts preserve all labels, typography, and bounds in 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory, dir } of Object.values(editions))
     for (const figure of [1, 3, 10]) {
       const source = readFigure(directory, figure);
@@ -238,9 +238,6 @@ test('source guards accept known variants and reject structural drift', () => {
     layoutEmbodiedEvaluation(readFigure('book-en', 10)),
   );
   assert.doesNotThrow(() => layoutEmbodiedEvaluation(readFigure('book', 10)));
-  assert.doesNotThrow(() =>
-    layoutEmbodiedEvaluation(readFigure('book-tr', 10)),
-  );
   for (const figure of [1, 3, 10]) {
     const source = readFigure('book-en', figure);
     assert.throws(

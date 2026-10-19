@@ -9,7 +9,7 @@ const source = (dir, n) =>
     new URL(`../../${dir}/images/fig6-${n}.svg`, import.meta.url),
     'utf8',
   );
-test('Computer-use layouts preserve every label and canvas bounds in 15 editions', () => {
+test('Computer-use layouts preserve every label and canvas bounds in 2 editions', () => {
   for (const { directory, dir } of Object.values(editions))
     for (const n of [11, 12, 13, 14]) {
       const s = source(directory, n),

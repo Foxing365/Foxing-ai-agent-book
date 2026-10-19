@@ -1,9 +1,9 @@
 # AI Agents in Depth: Design Principles and Engineering Practice
 
-[![PDF](https://img.shields.io/badge/PDF-download-success.svg)](#-e-book) [![Read online](https://img.shields.io/badge/🌐_Read_online-bojieli.github.io-success?style=flat-square)](https://bojieli.github.io/ai-agent-book/astro/en/) [![Stars](https://img.shields.io/github/stars/bojieli/ai-agent-book?style=social)](https://github.com/bojieli/ai-agent-book) [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](../../LICENSE) [![Languages](https://img.shields.io/badge/translations-15%20languages-informational.svg)](#-e-book)
+[![PDF](https://img.shields.io/badge/PDF-download-success.svg)](#-e-book) [![Read online](https://img.shields.io/badge/🌐_Read_online-bojieli.github.io-success?style=flat-square)](https://bojieli.github.io/ai-agent-book/astro/en/) [![Stars](https://img.shields.io/github/stars/bojieli/ai-agent-book?style=social)](https://github.com/bojieli/ai-agent-book) [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](../../LICENSE) [![Languages](https://img.shields.io/badge/translations-2%20languages-informational.svg)](#-e-book)
 [![Trending GitHub Project of the Day](https://img.shields.io/badge/GitHub%20Trending-Project%20of%20the%20Day-orange?logo=github)](https://github.com/trending)
 
-**[中文](../../README.md) · English ← current · [Español](../es/README.md) · [Bahasa Indonesia](../id/README.md) · [العربية](../ar/README.md) · [繁體中文（台灣）](../zh-TW/README.md) · [Русский](../ru/README.md) · [Tiếng Việt](../vi/README.md) · [தமிழ்](../ta/README.md) · [日本語](../ja/README.md) · [Türkçe](../tr/README.md) · [한국어](../ko/README.md) · [Magyar](../hu/README.md) · [עברית](../../README.he.md) · [Português (Brasil)](../../README.ptbr.md)**
+**[中文](../../README.md) · English ← current**
 
 > 📥 **[Download PDF / EPUB](#-e-book)** (recommended) — the PDF / EPUB editions offer the best reading experience; you can also [read online](https://bojieli.github.io/ai-agent-book/astro/en/) (multi-language switcher, collapsible chapter tree, highlights and notes, auto-rebuilt on every push to main).
 
@@ -17,7 +17,7 @@
 >
 > If you are reading an older PDF, we recommend [downloading the latest PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-en.pdf). The new edition also includes many corrections and content adjustments, so please use the latest version.
 
-| 📚 **10 chapters** of text, from basics to production | 📂 **93** companion projects (70+ standalone) | 🌐 **15 languages**: CN / EN / ES / ID / AR / zh-TW / RU / TA / VI / JA / TR / KO / HU / HE / PT-BR |
+| 📚 **10 chapters** of text, from basics to production | 📂 **93** companion projects (70+ standalone) | 🌐 **2 languages**: Simplified Chinese / English |
 | :---: | :---: | :---: |
 
 ## 📖 E-Book
@@ -25,19 +25,10 @@
 > 📥 **Download** (recommended; full text, free and open source). These links always point to the latest build of the `main` branch; fixed editions are on the [Releases](https://github.com/bojieli/ai-agent-book/releases) page:
 > - **Chinese (original)**: [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-zh-CN.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-zh-CN.epub)
 > - **English** (community translation, by [@nsdevaraj](https://github.com/nsdevaraj) and [@whanyu1212](https://github.com/whanyu1212)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-en.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-en.epub)
-> - **Spanish** (community translation, by [@santhreal](https://github.com/santhreal)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-es.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-es.epub)
-> - **Traditional Chinese (Taiwan)** (community translation, by [@tigercosmos](https://github.com/tigercosmos)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-zh-TW.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-zh-TW.epub)
-> - **Russian** (community translation, by [@ui99ru](https://github.com/ui99ru)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ru.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ru.epub)
-> - **Tamil** (community translation, by [@nsdevaraj](https://github.com/nsdevaraj)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ta.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ta.epub)
-> - **Vietnamese** (community translation, by [@toanalien](https://github.com/toanalien)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-vi.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-vi.epub)
-> - **Japanese** (community translation, by [@eltociear](https://github.com/eltociear)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ja.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ja.epub)
-> - **Arabic** (community translation, by [@TheSyBuilder](https://github.com/TheSyBuilder)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ar.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ar.epub)
-> - **Turkish** (community translation, by [@memisemre](https://github.com/memisemre)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-tr.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-tr.epub)
-> - **Korean** (community translation, by [@JeongJaeSoon](https://github.com/JeongJaeSoon)): [PDF](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ko.pdf) · [EPUB](https://github.com/bojieli/ai-agent-book/releases/download/latest/AI-Agents-in-Depth-ko.epub)
 >
 > 🌐 You can also [read online](https://bojieli.github.io/ai-agent-book/astro/en/) — multi-language switcher, collapsible chapter tree, highlights and notes, and direct links to companion experiments. Auto-rebuilt on every push to main.
 
-Chinese text source is in [`book/`](../../book/); English/Spanish/Arabic/Traditional Chinese (Taiwan)/Russian/Tamil/Vietnamese/Japanese/Turkish/Korean versions are community contributions (may lag behind the Chinese original), located in [`book-en/`](../../book-en/), [`book-es/`](../../book-es/), [`book-ar/`](../../book-ar/), [`book-zhtw/`](../../book-zhtw/), [`book-ru/`](../../book-ru/), [`book-ta/`](../../book-ta/), [`book-vi/`](../../book-vi/), [`book-ja/`](../../book-ja/), [`book-tr/`](../../book-tr/), [`book-ko/`](../../book-ko/) respectively.
+This fork maintains Simplified Chinese in [`book/`](../../book/) and English in [`book-en/`](../../book-en/). The English translation may lag behind the Chinese original.
 
 <details>
 <summary><b>🔧 Build PDF / EPUB yourself?</b> (PDF requires pandoc / xelatex / ElegantBook)</summary>
@@ -118,7 +109,7 @@ It is recommended to apply for API keys from several platforms for convenient le
 ## ❓ FAQ
 
 **Q: Is there a PDF / EPUB? Do I need to build it myself?**
-No. The [E-Book](#-e-book) section lists PDF / EPUB download links for 15 languages, which always point to the latest build of the `main` branch; you can also [read online](https://bojieli.github.io/ai-agent-book/). You only need to build it yourself if you want to modify the text and re-typeset it.
+No. The [E-Book](#-e-book) section lists PDF / EPUB download links for 2 languages, which always point to the latest build of the `main` branch; you can also [read online](https://bojieli.github.io/ai-agent-book/). You only need to build it yourself if you want to modify the text and re-typeset it.
 
 **Q: What background knowledge do I need to read this book?**
 The "Prerequisites" section of the introduction spells this out: you can read and modify moderately complex Python code; you have used LLM products such as ChatGPT or Claude; you are familiar with at least one AI coding tool (Claude Code, Codex, Cursor, etc.); and you know software-engineering basics such as the command line, Git, JSON, and REST APIs. Apart from Chapter 8 on post-training, the book demands very little math or machine learning.
@@ -206,7 +197,6 @@ The book and accompanying code are fully open source. Pull Requests are very wel
 | 🐛 **Code improvements & bug fixes** | Make companion projects more robust, usable, and production-ready |
 | 🧪 **New practice projects** | Add/replace better implementations for experiments, or contribute new examples |
 | 🎨 **Figure design** | Directly improve the checked-in SVG charts under `book/images/` |
-| 🌐 **New translations** | Translations into more languages are welcome; see English (`book-en/`), Arabic (`book-ar/`), Traditional Chinese/Taiwan (`book-zhtw/`), Russian (`book-ru/`), Tamil (`book-ta/`), Vietnamese (`book-vi/`), Japanese (`book-ja/`), Turkish (`book-tr/`), and Korean (`book-ko/`) for reference |
 
 Before submitting, please run the relevant experiments to confirm reproducibility; feel free to open an issue to discuss ideas first.
 

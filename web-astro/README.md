@@ -1,10 +1,7 @@
 # Astro book reader
 
 The web reader for **AI Agents in Depth**, built with plain Astro.
-The homepage and complete Chapters 1–10 are implemented in all 15 maintained editions:
-English, Simplified Chinese, Traditional Chinese, Spanish, Indonesian, Russian,
-Tamil, Vietnamese, Japanese, Korean, Arabic, Turkish, Hungarian, Hebrew, and
-Brazilian Portuguese. All ten chapters are available in the reader.
+The homepage and complete Chapters 1–10 are implemented in Simplified Chinese and English. All ten chapters are available in the reader.
 
 ## Publishing
 
@@ -30,7 +27,7 @@ ASTRO_BASE=/ai-agent-book/astro/ npm run check:deployment
 
 The existing test suite runs against the root build. The deployment check then
 verifies the prefixed build's page links, scripts, styles, fonts, figure variants,
-and README links for all 15 editions. `ASTRO_BASE` must match the directory where
+and README links for both editions. `ASTRO_BASE` must match the directory where
 the generated `dist/` contents will be served; it does not change the on-disk layout.
 
 ## Run locally
@@ -121,8 +118,8 @@ credits and source history remain available in `docs/en/README.md` and Git.
 
 ## Prototype limits
 
-- All 15 maintained source editions cover the homepage and all ten chapters. Search is not implemented yet.
-- The same 21 optional machine-translation languages as MkDocs are available from English.
+- Both maintained source editions cover the homepage and all ten chapters. Search is not implemented yet.
+- The language picker offers only Simplified Chinese and English.
   They are clearly marked as unvetted. The pinned third-party script and service load
   only after selection; failures leave the source readable. Code and figures remain
   English, and annotations are disabled in machine-translated views. New interface
@@ -171,7 +168,7 @@ The new SVGs use wrapping XHTML text for browser layout. Figure 2-7 embeds the o
 
 ### Shared diagram style across Chapters 1–10
 
-`figure-style.mjs` defines the common slate/blue palette, surfaces, rounded boxes, and connectors for both themes. `prepare-assets.mjs` generates light/dark presentation variants for all referenced chapter figures across all 15 editions under ignored `public/figures/book/`. Source labels and geometry are preserved, using the existing reflowed layouts for figures 1-1 and 2-1 and the authored English Chapter 2 replacements where available. Experimental heatmap cell colors and embedded raster data are protected.
+`figure-style.mjs` defines the common slate/blue palette, surfaces, rounded boxes, and connectors for both themes. `prepare-assets.mjs` generates light/dark presentation variants for all referenced chapter figures across both editions under ignored `public/figures/book/`. Source labels and geometry are preserved, using the existing reflowed layouts for figures 1-1 and 2-1 and the authored English Chapter 2 replacements where available. Experimental heatmap cell colors and embedded raster data are protected.
 
 Original source URLs now always serve byte-for-byte originals, including figures 1-1 and 2-1. Each rendered caption has a localized original-figure link. The reader switches image variants with its theme, including the expanded viewer. Raster figures retain their pixels inside a matching frame. To change the design, edit the shared palette rather than editing the original artwork.
 
@@ -193,7 +190,7 @@ The remaining Chapter 7 figures also use generated web layouts: 7-1 separates it
 
 ### Chapter 8: model post-training
 
-Chapter 8 uses the maintained Markdown in all 15 editions, with native Python highlighting for its five teaching examples, KaTeX equations, source footnotes, and the existing reading, highlighting, and note controls. The original Markdown and SVGs remain the MkDocs/PDF sources.
+Chapter 8 uses the maintained Markdown in both editions, with native Python highlighting for its five teaching examples, KaTeX equations, source footnotes, and the existing reading, highlighting, and note controls. The original Markdown and SVGs remain the MkDocs/PDF sources.
 
 Figure 8-2 separates its five state transitions from their action labels with right-angle connectors and wrapping text slots. All 13 localized labels, the terminal reward, and the original five-state graph are preserved in both themes; the raw SVGs remain unchanged.
 
@@ -207,17 +204,17 @@ Figures 8-14 through 8-18 use dedicated wrapping layouts: the turn comparison ha
 
 The generated web figures share the book's light/dark palette. Figures 8-4, 8-7, 8-9, 8-10, and 8-16 use wrapping layouts to separate equations, stage labels, and connectors while retaining every localized source label. Figure 8-3 keeps its original grid cells, numeric values, direction arrows, and grayscale encoding together; only its explanatory key is reflowed. Data-bearing SVG groups are protected from palette conversion.
 
-Figure 8-13 is a content correction in the web presentation: the Simplified Chinese figure and chapter describe 16 isolated SWE-bench rollouts with four passing, but the other 14 editions still contain an older four-candidate arithmetic example. `scripts/grpo-rollouts-figure.mjs` supplies a localized, explicitly hypothetical 16-rollout diagram in all editions, following the current Chinese source and preserving its pass positions, reward values, and group mean. Every original remains available through its original-image link.
+Figure 8-13 is a content correction in the web presentation: the Simplified Chinese figure and chapter describe 16 isolated SWE-bench rollouts with four passing, but the English edition still contains an older four-candidate arithmetic example. `scripts/grpo-rollouts-figure.mjs` supplies a localized, explicitly hypothetical 16-rollout diagram in all editions, following the current Chinese source and preserving its pass positions, reward values, and group mean. Every original remains available through its original-image link.
 
 ### Chapter 9: continual evolution of agents
 
-Chapter 9 reads the maintained Markdown directly in all 15 editions, including its three comparison tables, 25 source footnotes, and existing highlighting and note controls. It contains no fenced code examples. Chapter 8 links forward to the local Chapter 9, which continues to the local Chapter 10.
+Chapter 9 reads the maintained Markdown directly in both editions, including its three comparison tables, 25 source footnotes, and existing highlighting and note controls. It contains no fenced code examples. Chapter 8 links forward to the local Chapter 9, which continues to the local Chapter 10.
 
 All five figures use generated wrapping layouts in the shared light/dark style. The overall evolution and experience-to-knowledge flows reserve space for feedback connectors. The trajectory-verification diagram retains the outcome/process/quality hierarchy, while the four update methods remain complementary choices. The deployment diagram separates online execution from offline candidate generation and verification, with a distinct release path and trust boundary. Localized labels and original SVGs are preserved; original-figure links continue to serve unchanged source files.
 
 ### Chapter 10: multi-agent collaboration
 
-The final chapter reads the maintained Markdown in all 15 editions, including four tables, five highlighted code/flow examples, and each edition’s source footnotes (14 in most editions; 15 in Hungarian). Chapter 9 links to the local Chapter 10, and the final reader navigation returns to the edition’s homepage contents instead of linking to a nonexistent next chapter.
+The final chapter reads the maintained Markdown in both editions, including four tables, five highlighted code/flow examples, and each edition’s source footnotes (14 in each maintained edition). Chapter 9 links to the local Chapter 10, and the final reader navigation returns to the edition’s homepage contents instead of linking to a nonexistent next chapter.
 
 All 11 diagrams use generated wrapping layouts in the shared light/dark palette, preserving the localized source labels and original SVG files. Context boundaries, private and shared workspaces, reviewer feedback, sequential and parallel delegation, and society/game information flows retain their distinct relationships. Figure 10-2 also adds the missing mount connector to the shared workspace, matching the four mounted areas described in the chapter. The original-image links continue to serve the untouched source assets.
 

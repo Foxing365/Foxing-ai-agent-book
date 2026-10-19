@@ -36,8 +36,8 @@ function boxes(svg, element) {
   }));
 }
 
-test('voice architecture layouts retain all source labels and bounds in all 15 editions', () => {
-  assert.equal(Object.keys(editions).length, 15);
+test('voice architecture layouts retain all source labels and bounds in all 2 editions', () => {
+  assert.equal(Object.keys(editions).length, 2);
   for (const { directory, dir } of Object.values(editions))
     for (const figure of [6, 7, 8, 9, 10]) {
       const source = readFigure(directory, figure);

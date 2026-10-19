@@ -238,8 +238,8 @@ test('Chinese footnotes keep separate citation URLs and translated navigation', 
   }
 });
 
-test('All 15 maintained editions have complete UI catalogs and isolated browser messages', () => {
-  assert.equal(editions.length, 15);
+test('Both maintained editions have complete UI catalogs and isolated browser messages', () => {
+  assert.equal(editions.length, 2);
   assert.equal(pages.length, editions.length * (availableChapters.length + 1));
   const catalogs = Object.fromEntries(
     editions.map(({ lang }) => [
@@ -274,23 +274,6 @@ test('All 15 maintained editions have complete UI catalogs and isolated browser 
   }
 });
 
-test('Arabic citation punctuation stays outside links', () => {
-  const html = pages.find((page) => page.route === editionData.ar.chapter).html;
-  for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
-    assert.ok(
-      !decodeURI(href).endsWith('،'),
-      `Punctuation absorbed into URL: ${href}`,
-    );
-  }
-  for (const href of [
-    'https://www.drjoshcsimmons.com/writing/we-are-entering-the-graph-engineering-phase',
-    'https://x.com/steipete/status/2078277297791189132',
-    'https://docs.langchain.com/oss/python/langgraph/overview',
-    'https://learn.microsoft.com/en-us/agent-framework/workflows/',
-  ]) {
-    assert.ok(html.includes(`href="${href}"`));
-  }
-});
 
 test('Chapter 1 language section links resolve and round-trip across editions', () => {
   const maps = Object.fromEntries(
@@ -319,7 +302,7 @@ test('Chapter 1 language section links resolve and round-trip across editions', 
   }
 });
 
-test('Chinese homepage is the default and machine options are clearly separate', () => {
+test('Chinese homepage is the default and only maintained editions are offered', () => {
   assert.ok(
     readFileSync(join(dist, 'index.html'), 'utf8').includes('lang="zh-CN"'),
   );
@@ -327,8 +310,7 @@ test('Chinese homepage is the default and machine options are clearly separate',
     readFileSync(join(dist, 'en/index.html'), 'utf8').includes('lang="en"'),
   );
   for (const { html } of pages) {
-    assert.equal([...html.matchAll(/data-machine-language=/g)].length, 21);
-    assert.ok(html.includes('未经审核 / Not vetted'));
+    assert.equal([...html.matchAll(/data-machine-language=/g)].length, 0);
     assert.ok(!html.includes('<script src="https://cdn.staticfile.net'));
   }
 });
@@ -380,7 +362,7 @@ test('Chapter 2 preserves all editions, figures, outlines, and chapter isolation
     );
     assert.ok(Object.keys(mappings).length >= 40);
     for (const translations of Object.values(mappings)) {
-      assert.equal(Object.keys(translations).length, 15);
+      assert.equal(Object.keys(translations).length, 2);
       for (const target of editions) {
         const targetHtml = readFileSync(
           join(
